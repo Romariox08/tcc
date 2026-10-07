@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Inclui</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="logo-area">
+            <h1>Move Inclui</h1>
+        </div>
+        <button type="button" class="btn-perfil" id="btn-perfil">Perfil / Ajuda</button>
+    </header>
+
+    <main>
+        <section id="inicio" class="pagina ativa">
+            <div class="boas-vindas">
+                <span class="subtitulo">TRANSPORTE ACESSÍVEL</span>
+                <h2>Transporte acessível para todos</h2>
+                <p>Informe seu local de partida e para onde deseja ir.</p>
+            </div>
+
+            <section class="formulario">
+                <div class="campo">
+                    <label for="origem">Local de partida</label>
+                    <input type="text" id="origem" placeholder="Digite seu local de partida" required>
+                    <span class="mensagem-erro" id="erro-origem"></span>
+                </div>
+
+                <div class="campo">
+                    <label for="destino">Para onde vamos?</label>
+                    <input type="text" id="destino" placeholder="Digite seu destino" required>
+                    <span class="mensagem-erro" id="erro-destino"></span>
+                </div>
+            </section>
+
+            <button type="button" class="btn-carro" id="btn-carro">🚗 Chamar Carro Adaptado</button>
+
+            <section class="destinos">
+                <span class="subtitulo">ACESSO RÁPIDO</span>
+                <h2>Destinos frequentes</h2>
+                <div class="botoes-destinos">
+                    <button type="button" class="btn-destino casa" data-pagina="casa">🏠 Casa</button>
+                    <button type="button" class="btn-destino trabalho" data-pagina="trabalho">💼 Trabalho</button>
+                    <button type="button" class="btn-destino medico" data-pagina="medico">🏥 Médico</button>
+                </div>
+            </section>
+        </section>
+
+        <section id="perfil" class="pagina" hidden>
+            <div class="pagina-conteudo">
+                <h2>👤 Meu Perfil</h2>
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                    <span class="mensagem-erro" id="erro-nome"></span>
+                </div>
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="Digite seu telefone">
+                    <span class="mensagem-erro" id="erro-telefone"></span>
+                </div>
+                <div class="campo">
+                    <label for="necessidade">Necessidade de acessibilidade</label>
+                    <select id="necessidade">
+                        <option value="">Selecione uma opção</option>
+                        <option value="Cadeira de rodas">Cadeira de rodas</option>
+                        <option value="Deficiência visual">Deficiência visual</option>
+                        <option value="Deficiência auditiva">Deficiência auditiva</option>
+                        <option value="Mobilidade reduzida">Mobilidade reduzida</option>
+                    </select>
+                    <span class="mensagem-erro" id="erro-necessidade"></span>
+                </div>
+                <div class="acoes">
+                    <button type="button" class="btn-principal" id="btn-salvar-perfil">Salvar Perfil</button>
+                    <button type="button" class="btn-voltar" data-pagina="inicio">← Voltar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="carro" class="pagina" hidden>
+            <div class="pagina-conteudo">
+                <h2>🚗 Carro Adaptado</h2>
+                <div class="resumo">
+                    <p>Partida: <strong id="resumo-origem">Não informado</strong></p>
+                    <p>Destino: <strong id="resumo-destino">Não informado</strong></p>
+                </div>
+                <div class="acoes">
+                    <button type="button" class="btn-principal" id="btn-confirmar-carro">Confirmar Solicitação</button>
+                    <button type="button" class="btn-voltar" data-pagina="inicio">← Voltar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="casa" class="pagina" hidden>
+            <div class="pagina-conteudo">
+                <h2>🏠 Ir para Casa</h2>
+                <div class="campo">
+                    <label for="endereco-casa">Endereço da casa</label>
+                    <input type="text" id="endereco-casa" placeholder="Digite seu endereço">
+                    <span class="mensagem-erro" id="erro-endereco-casa"></span>
+                </div>
+                <div class="acoes">
+                    <button type="button" class="btn-principal" id="btn-casa">Solicitar carro para casa</button>
+                    <button type="button" class="btn-voltar" data-pagina="inicio">← Voltar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="trabalho" class="pagina" hidden>
+            <div class="pagina-conteudo">
+                <h2>💼 Ir para o Trabalho</h2>
+                <div class="campo">
+                    <label for="endereco-trabalho">Endereço do trabalho</label>
+                    <input type="text" id="endereco-trabalho" placeholder="Digite o endereço">
+                    <span class="mensagem-erro" id="erro-endereco-trabalho"></span>
+                </div>
+                <div class="acoes">
+                    <button type="button" class="btn-principal" id="btn-trabalho">Solicitar carro para trabalho</button>
+                    <button type="button" class="btn-voltar" data-pagina="inicio">← Voltar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="medico" class="pagina" hidden>
+            <div class="pagina-conteudo">
+                <h2>🏥 Consulta Médica</h2>
+                <div class="campo">
+                    <label for="endereco-medico">Endereço do médico</label>
+                    <input type="text" id="endereco-medico" placeholder="Digite o endereço">
+                    <span class="mensagem-erro" id="erro-endereco-medico"></span>
+                </div>
+                <div class="campo">
+                    <label for="horario">Horário da consulta</label>
+                    <input type="time" id="horario">
+                    <span class="mensagem-erro" id="erro-horario"></span>
+                </div>
+                <div class="acoes">
+                    <button type="button" class="btn-principal" id="btn-medico">Solicitar carro para consulta</button>
+                    <button type="button" class="btn-voltar" data-pagina="inicio">← Voltar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7a3;
+    color: #17202a;
+}
+.topo {
+    padding: 15px 30px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #0878d1;
+}
+.topo h1 { color: #0878d1; margin: 0; }
+.pagina { max-width: 800px; margin: 0 auto; padding: 20px; }
+.pagina[hidden] { display: none; }
+.formulario, .pagina-conteudo {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.campo { margin-bottom: 15px; }
+label { display: block; font-weight: bold; margin-bottom: 5px; }
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #17202a;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-area img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.logo-area h1 {
+    margin: 0;
+    color: #0878d1;
+    font-size: 30px;
+    line-height: 1.1;
+}
+button {
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.btn-perfil, .btn-principal { background: #0878d1; color: #fff; border: none; }
+.btn-carro { background: #d93636; color: #fff; width: 100%; border: none; padding: 18px; font-size: 20px; }
+.botoes-destinos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.btn-destino { padding: 20px; border: none; color: #fff; font-size: 18px; }
+.casa { background: #0878d1; }
+.trabalho { background: #218739; }
+.medico { background: #e6a700; color: #17202a; }
+.btn-voltar { background: #fff; border: 2px solid #17202a; }
+.mensagem-erro { color: #d93636; font-size: 14px; font-weight: bold; }
+.resumo { background: #f4f7a3; padding: 15px; border-left: 5px solid #0878d1; }
